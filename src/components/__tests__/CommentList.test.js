@@ -7,8 +7,11 @@ import CommentList from '../CommentList';
 let wrapped;
 
 beforeEach(() => {
+    const initialState = {
+        comments: ['Comment 1', 'Comment 2']
+    };
     wrapped = mount(
-        <Root>
+        <Root initialState={initialState}>
             <CommentList />
         </Root>
     );
